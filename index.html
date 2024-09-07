@@ -83,6 +83,42 @@
             0%, 100% { transform: translateX(0); }
             50% { transform: translateX(-10px); }
         }
+
+        /* Sun Animation */
+        .sun {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            z-index: 0;
+            animation: rotate 30s infinite linear;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Asteroid Animation */
+        .asteroid {
+            position: absolute;
+            width: 50px;
+            animation: fly 10s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes fly {
+            from {
+                transform: translateX(100vw) translateY(0) rotate(0deg);
+            }
+            to {
+                transform: translateX(-100vw) translateY(100vh) rotate(720deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -99,6 +135,40 @@
 
     <!-- ISS -->
     <img src="assets/images/iss.jpg.png" alt="ISS" class="iss">
+
+    <!-- Sun -->
+    <img src="assets/images/sun.png" alt="Sun" class="sun">
+
+    <!-- Asteroids -->
+    <script>
+        const asteroidCount = 10;  // Number of asteroids
+        const asteroidImages = [
+            'https://i.imgur.com/3aF7jV4.png',  // Asteroid image 1
+            'https://i.imgur.com/BOfI6Qn.png',  // Asteroid image 2
+            'https://i.imgur.com/mXeD2Ak.png'   // Asteroid image 3
+        ];
+
+        function createAsteroid() {
+            const asteroid = document.createElement('img');
+            asteroid.src = asteroidImages[Math.floor(Math.random() * asteroidImages.length)];
+            asteroid.className = 'asteroid';
+            asteroid.style.top = `${Math.random() * 100}%`;
+            asteroid.style.left = `${Math.random() * 100}%`;
+            asteroid.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            asteroid.style.width = `${Math.random() * 50 + 20}px`;
+            document.body.appendChild(asteroid);
+
+            setTimeout(() => {
+                asteroid.remove();
+            }, 10000);
+        }
+
+        for (let i = 0; i < asteroidCount; i++) {
+            setTimeout(createAsteroid, i * 1000);
+        }
+
+        setInterval(createAsteroid, 5000);
+    </script>
 
 </body>
 </html>
