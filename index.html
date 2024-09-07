@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Under Maintenance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: #333;
+        }
+
+        .content {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        /* Floating Astronaut Animation */
+        .astronaut {
+            position: absolute;
+            width: 100px;
+            animation: float 6s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        .astronaut:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-duration: 7s;
+            animation-delay: 1s;
+        }
+
+        .astronaut:nth-child(2) {
+            top: 50%;
+            right: 15%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .astronaut:nth-child(3) {
+            bottom: 20%;
+            left: 40%;
+            animation-duration: 9s;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(15deg); }
+        }
+
+        /* ISS Animation */
+        .iss {
+            position: absolute;
+            bottom: 10%;
+            right: 20%;
+            width: 300px;
+            animation: sway 5s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>We’ll be back soon!</h1>
+        <p>Our website is currently undergoing scheduled maintenance.</p>
+    </div>
+
+    <!-- Astronauts -->
+    <img src="img/astronaut.jpg.png" alt="Astronaut" class="astronaut">
+    <img src="img/astronaut.jpg.png" alt="Astronaut" class="astronaut">
+    <img src="img/astronaut.jpg.png" alt="Astronaut" class="astronaut">
+
+    <!-- ISS -->
+    <img src="img/iss.jpg.png" alt="ISS" class="iss">
+
+</body>
+</html>
