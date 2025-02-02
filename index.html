@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Under Maintenance</title>
+    <title>Interstellar Spinning Scene</title>
     <style>
         body {
             margin: 0;
@@ -12,85 +12,86 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(to bottom, #0a192f, #000033);
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            background: radial-gradient(circle, #000033, #000000);
             overflow: hidden;
         }
 
-        .container {
+        .galaxy {
             position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, transparent 50%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.05) 100%);
+            animation: spin 20s linear infinite;
         }
 
-        .rocket {
-            font-size: 64px;
+        .star {
             position: absolute;
-            bottom: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: launch 4s ease-in-out infinite;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+            animation: twinkle 2s infinite alternate;
         }
 
-        @keyframes launch {
+        @keyframes spin {
             0% {
-                bottom: -100px;
-                transform: translateX(-50%) rotate(0deg);
-            }
-            50% {
-                bottom: 100%;
-                transform: translateX(-50%) rotate(45deg);
+                transform: rotate(0deg);
             }
             100% {
-                bottom: 100%;
-                transform: translateX(-50%) rotate(90deg);
+                transform: rotate(360deg);
             }
         }
 
-        .trail {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 4px;
-            height: 0;
-            background: linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent);
-            animation: trail 4s ease-in-out infinite;
-        }
-
-        @keyframes trail {
+        @keyframes twinkle {
             0% {
-                height: 0;
-            }
-            50% {
-                height: 100%;
+                opacity: 0.5;
             }
             100% {
-                height: 100%;
+                opacity: 1;
             }
+        }
+
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            z-index: 10;
         }
 
         h1 {
-            margin-top: 20px;
             font-size: 24px;
-            animation: fade 4s ease-in-out infinite;
+            margin: 0;
         }
 
-        @keyframes fade {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
+        p {
+            font-size: 16px;
+            margin: 10px 0 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="rocket">🚀</div>
-        <div class="trail"></div>
+    <div class="galaxy">
+        <!-- Stars -->
+        <div class="star" style="top: 10%; left: 20%;"></div>
+        <div class="star" style="top: 30%; left: 70%;"></div>
+        <div class="star" style="top: 50%; left: 40%;"></div>
+        <div class="star" style="top: 80%; left: 10%;"></div>
+        <div class="star" style="top: 60%; left: 80%;"></div>
+        <div class="star" style="top: 20%; left: 50%;"></div>
+        <div class="star" style="top: 90%; left: 60%;"></div>
+        <div class="star" style="top: 40%; left: 30%;"></div>
+        <div class="star" style="top: 70%; left: 90%;"></div>
+        <div class="star" style="top: 10%; left: 80%;"></div>
+    </div>
+    <div class="message">
         <h1>Website Under Maintenance</h1>
-        <p>We're launching something amazing soon!</p>
+        <p>Exploring the cosmos. Be back soon!</p>
     </div>
 </body>
 </html>
