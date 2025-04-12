@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wallenc Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #0e2f44;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .project {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .project h2 {
+      color: #0e2f44;
+    }
+    .impact {
+      margin-top: 1rem;
+    }
+    .impact ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Projects</h1>
+    <p>Real-world innovation with meaningful impact</p>
+  </header>
+
+  <div class="container">
+    
+    <div class="project">
+      <h2>A Simple Idea That Saves Lives</h2>
+      <p>To address the rising issue of high-speed trains colliding with stray cattle, Wallenc developed a wearable safety band for livestock. This non-invasive band gently alerts animals as they near danger zones, helping them move away and avoid accidents.</p>
+      <div class="impact">
+        <h4>The Impact:</h4>
+        <ul>
+          <li>Prevents cattle-train accidents</li>
+          <li>Reduces railway disruptions</li>
+          <li>Protects rural livestock</li>
+          <li>Supports safer rail operations</li>
+          <li>Backed by public awareness and field-tested success</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Invisible, Yet Unmistakable: Anti-Fraud Tech</h2>
+      <p>Wallenc created a Water Soluble Anti-Counterfeiting Film to tackle return fraud in fashion and e-commerce. This invisible tag dissolves on use and reveals a secure code under UV light, ensuring product authenticity and preventing tampering.</p>
+      <div class="impact">
+        <h4>The Real-World Impact:</h4>
+        <ul>
+          <li>Stops fraudulent returns and "wardrobing"</li>
+          <li>Protects brand reputation</li>
+          <li>Eco-friendly and product-safe</li>
+          <li>Applicable across clothing, footwear, bags & more</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
 
