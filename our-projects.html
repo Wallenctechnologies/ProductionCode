@@ -100,10 +100,58 @@
           India records over 25,000 incidents annually involving stray cattle on railway tracks, leading to significant loss of livestock, damage to railway infrastructure, and disruption of train services. These accidents not only cause emotional and financial distress to farmers but also result in delays, repairs, and economic losses for Indian Railways.
           To address this critical issue, we developed Jiva Kavach—a first-of-its-kind preventive safety system for cattle. Successfully deployed in field trials, Jiva Kavach has shown proven effectiveness in deterring livestock from straying onto railway tracks, thereby reducing the risk of accidents. This socially impactful solution has been awarded a patent, recognizing its originality and public value.
           This achievement stands as a testament to our commitment to rural safety, animal welfare, and infrastructure protection—offering a scalable and sustainable solution to a problem that affects thousands of lives and livelihoods every year.
+          <!-- Watch the Video Button -->
+      <button class="btn btn-primary" onclick="playInlineVideo()">
+        🎥 Watch the Video
+      </button>
         </p>
       </div>
     </div>
   </div>
+  <!-- Script: Inline Video Popup -->
+<script>
+  function playInlineVideo() {
+    // Overlay
+    const overlay = document.createElement('div');
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100vh";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+    overlay.style.display = "flex";
+    overlay.style.justifyContent = "center";
+    overlay.style.alignItems = "center";
+    overlay.style.zIndex = "9998";
+    overlay.onclick = () => {
+      document.body.removeChild(overlay);
+    };
+
+    // Video Container
+    const videoWrapper = document.createElement('div');
+    videoWrapper.style.width = "80%";
+    videoWrapper.style.maxWidth = "800px";
+    videoWrapper.style.aspectRatio = "16/9";
+    videoWrapper.style.background = "#000";
+    videoWrapper.style.position = "relative";
+
+    // Stop click bubbling from closing when inside the video box
+    videoWrapper.onclick = (e) => e.stopPropagation();
+
+    // iFrame
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/YvLaAI9BN50?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.allow = "autoplay; fullscreen";
+    iframe.allowFullscreen = true;
+
+    videoWrapper.appendChild(iframe);
+    overlay.appendChild(videoWrapper);
+    document.body.appendChild(overlay);
+  }
+</script>
 
   <!-- Achievement 2 -->
   <div class="row achievement align-items-center flex-lg-row-reverse" data-aos="fade-left">
