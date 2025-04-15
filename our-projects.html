@@ -102,7 +102,7 @@
           This achievement stands as a testament to our commitment to rural safety, animal welfare, and infrastructure protection—offering a scalable and sustainable solution to a problem that affects thousands of lives and livelihoods every year.
           <!-- Watch the Video Button -->
       <button class="btn btn-primary" onclick="playInlineVideo()">
-        🎥 Watch the Video
+        Watch Now!
       </button>
         </p>
       </div>
@@ -165,11 +165,58 @@
          We're excited to introduce a cutting-edge anti-counterfeiting solution that enhances product authenticity, security, and consumer trust. Built to combat return fraud, product swapping, and counterfeiting, it offers a tamper-evident, one-time-use verification system that keeps products traceable and unaltered throughout their lifecycle.
          This discreet technology detects fraudulent returns—like wardrobing or counterfeit swaps—instantly, helping businesses avoid financial and reputational losses. It integrates seamlessly without affecting product design or sustainability, and it's effective across industries including fashion, retail, logistics, and high-value goods.
          By making authenticity checks void after use, this innovation provides a reliable safeguard for brands and holds promise for secure applications like packaging. It’s not just fraud protection—it’s a smarter, more secure way forward.
+         <!-- Watch the Video Button -->
+      <button class="btn btn-primary" onclick="playInlineVideo()">
+        Watch Now!
+      </button> 
         </p>
       </div>
     </div>
   </div>
+ <!-- Script: Inline Video Popup -->
+<script>
+  function playInlineVideo() {
+    // Overlay
+    const overlay = document.createElement('div');
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100vh";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+    overlay.style.display = "flex";
+    overlay.style.justifyContent = "center";
+    overlay.style.alignItems = "center";
+    overlay.style.zIndex = "9998";
+    overlay.onclick = () => {
+      document.body.removeChild(overlay);
+    };
 
+    // Video Container
+    const videoWrapper = document.createElement('div');
+    videoWrapper.style.width = "80%";
+    videoWrapper.style.maxWidth = "800px";
+    videoWrapper.style.aspectRatio = "16/9";
+    videoWrapper.style.background = "#000";
+    videoWrapper.style.position = "relative";
+
+    // Stop click bubbling from closing when inside the video box
+    videoWrapper.onclick = (e) => e.stopPropagation();
+
+    // iFrame
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/YvLaAI9BN50?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.allow = "autoplay; fullscreen";
+    iframe.allowFullscreen = true;
+
+    videoWrapper.appendChild(iframe);
+    overlay.appendChild(videoWrapper);
+    document.body.appendChild(overlay);
+  }
+</script>
   <!-- Achievement 3 -->
   <div class="row achievement align-items-center" data-aos="fade-right">
     <div class="col-lg-6">
