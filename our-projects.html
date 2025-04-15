@@ -1,263 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Projects | Wallenc</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <style>
-    .navbar {
-      padding: 20px;
-      background-color: #f8f9fa;
-    }
-    .navbar-brand img {
-      height: 40px;
-    }
-    .nav-item a {
-      margin: 0 10px;
-      color: #333;
-      text-decoration: none;
-    }
-    .nav-item a:hover {
-      color: #007bff;
-    }
-    .achievement {
-      margin-bottom: 40px;
-    }
-    .achievement img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .achievement-description {
-      padding-left: 20px;
-    }
-    .section-title {
-      margin: 60px 0 40px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Projects | Wallenc</title>
 
-<!-- ====== Header Start ====== -->
-<header class="ud-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/Wallenc-Logo.svg.png" alt="Logo" />
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-            <span class="toggler-icon">☰</span>
-          </button>
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
 
-          <div class="collapse navbar-collapse" id="navbarContent">
-            <ul id="nav" class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="ud-menu-scroll" href="index.html#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="ud-menu-scroll" href="index.html#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="our-projects.html">Our Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="ud-menu-scroll" href="index.html#team">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="ud-menu-scroll" href="index.html#contact">Contact</a>
-              </li>
-              <li class="nav-item nav-item-has-children">
-                <a href="javascript:void(0)"> Pages </a>
-                <ul class="ud-submenu">
-                  <!-- Add submenu items here -->
+    <!-- Internal CSS -->
+    <style>
+      /* Navigation */
+      .navbar {
+        padding: 20px;
+        background-color: #f8f9fa;
+      }
+      .navbar-brand img {
+        height: 40px;
+      }
+      .nav-item a {
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+      }
+      .nav-item a:hover {
+        color: #007bff;
+      }
+
+      /* Achievements Section */
+      .section-title {
+        margin: 60px 0 40px;
+        text-align: center;
+      }
+      .achievement {
+        margin-bottom: 40px;
+      }
+      .achievement img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .achievement-description {
+        padding-left: 20px;
+      }
+      .achievement-description p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      /* Video Modal */
+      .video-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .video-container {
+        width: 80%;
+        max-width: 800px;
+        aspect-ratio: 16/9;
+      }
+
+      /* Watch Now button */
+      .watch-video-btn {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ====== Header Start ====== -->
+    <header class="ud-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/Wallenc-Logo.svg.png" alt="Logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarContent"
+              >
+                <span class="toggler-icon">☰</span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarContent">
+                <ul id="nav" class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="index.html#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="index.html#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="our-projects.html">Our Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="index.html#team">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="index.html#contact"
+                      >Contact</a
+                    >
+                  </li>
+                  <li class="nav-item nav-item-has-children">
+                    <a href="javascript:void(0)">Pages</a>
+                    <ul class="ud-submenu">
+                      <!-- Add submenu items here -->
+                    </ul>
+                  </li>
                 </ul>
-              </li>
-            </ul>
+              </div>
+            </nav>
           </div>
-        </nav>
+        </div>
+      </div>
+    </header>
+    <!-- ====== Header End ====== -->
+
+    <!-- ====== Achievements Section ====== -->
+    <section class="container py-5">
+      <h2 class="section-title" data-aos="fade-down">Our Achievements</h2>
+
+      <!-- Achievement 1 -->
+      <div class="row achievement align-items-center" data-aos="fade-up">
+        <div class="col-lg-6">
+          <img src="assets/images/award1.png" alt="Innovation Award" />
+        </div>
+        <div class="col-lg-6">
+          <div class="achievement-description">
+            <h4 class="fw-bold">
+              Jiva Kavach – Patented Innovation for Cattle Safety, Successfully
+              Deployed On-Field
+            </h4>
+            <p>
+              India records over 25,000 incidents annually involving stray
+              cattle on railway tracks, leading to significant loss of
+              livestock, damage to railway infrastructure, and disruption of
+              train services. These accidents not only cause emotional and
+              financial distress to farmers but also result in delays, repairs,
+              and economic losses for Indian Railways. To address this critical
+              issue, we developed Jiva Kavach—a first-of-its-kind preventive
+              safety system for cattle. Successfully deployed in field trials,
+              Jiva Kavach has shown proven effectiveness in deterring livestock
+              from straying onto railway tracks, thereby reducing the risk of
+              accidents. This socially impactful solution has been awarded a
+              patent, recognizing its originality and public value. This
+              achievement stands as a testament to our commitment to rural
+              safety, animal welfare, and infrastructure protection—offering a
+              scalable and sustainable solution to a problem that affects
+              thousands of lives and livelihoods every year.
+            </p>
+            <button
+              class="btn btn-primary watch-video-btn"
+              data-video-id="AEtrUpSSv14"
+            >
+              Watch Now!
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievement 2 -->
+      <div
+        class="row achievement align-items-center flex-lg-row-reverse"
+        data-aos="fade-left"
+      >
+        <div class="col-lg-6">
+          <img
+            src="assets/images/award2.jpg"
+            alt="Partnership with Indian Railways"
+          />
+        </div>
+        <div class="col-lg-6">
+          <div class="achievement-description">
+            <h4 class="fw-bold">
+              Next-Gen Anti-Counterfeiting for Smarter Returns - Patented
+            </h4>
+            <p>
+              We're excited to introduce a cutting-edge anti-counterfeiting
+              solution that enhances product authenticity, security, and
+              consumer trust. Built to combat return fraud, product swapping,
+              and counterfeiting, it offers a tamper-evident, one-time-use
+              verification system that keeps products traceable and unaltered
+              throughout their lifecycle. This discreet technology detects
+              fraudulent returns—like wardrobing or counterfeit swaps—instantly,
+              helping businesses avoid financial and reputational losses. It
+              integrates seamlessly without affecting product design or
+              sustainability, and it's effective across industries including
+              fashion, retail, logistics, and high-value goods. By making
+              authenticity checks void after use, this innovation provides a
+              reliable safeguard for brands and holds promise for secure
+              applications like packaging. It's not just fraud protection—it's a
+              smarter, more secure way forward.
+            </p>
+            <button
+              class="btn btn-primary watch-video-btn"
+              data-video-id="AEtrUpSSv14"
+            >
+              Watch Now!
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievement 3 -->
+      <div class="row achievement align-items-center" data-aos="fade-right">
+        <div class="col-lg-6">
+          <img src="assets/images/ProjectX.jpg" alt="Tech Showcase" />
+        </div>
+        <div class="col-lg-6">
+          <div class="achievement-description">
+            <h4 class="fw-bold">Introducing ProjectX</h4>
+            <p>
+              Behind closed doors, something powerful is taking shape. ProjectX
+              isn't just another innovation—it's a shift in how we think about
+              security, trust, and technology. While we can't reveal the full
+              scope just yet, what we're building is designed to disrupt,
+              protect, and redefine standards across multiple industries. At its
+              core, ProjectX addresses a growing problem that affects millions
+              daily. The impact? Think fewer vulnerabilities, stronger
+              safeguards, and smarter systems. The ripple effects will be felt
+              in places you might not expect—from everyday consumer experiences
+              to high-stakes global operations. We're engineering not just a
+              product, but a force multiplier. One that blends invisibility with
+              influence, and simplicity with strength. The results? They'll
+              speak for themselves—soon. Stay tuned. The future is about to be
+              redefined.
+            </p>
+            <button
+              class="btn btn-primary watch-video-btn"
+              data-video-id="AEtrUpSSv14"
+            >
+              Watch Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== End Achievements Section ====== -->
+
+    <!-- Video Modal (hidden by default) -->
+    <div id="videoModal" class="video-modal" style="display: none">
+      <div class="video-container">
+        <iframe
+          id="videoFrame"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
-  </div>
-</header>
-<!-- ====== Header End ====== -->
 
-<!-- ====== Achievements Section ====== -->
-<section class="container py-5">
-  <h2 class="section-title" data-aos="fade-down">Our Achievements</h2>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- Achievement 1 -->
-  <div class="row achievement align-items-center" data-aos="fade-up">
-    <div class="col-lg-6">
-      <img src="assets/images/award1.png" alt="Innovation Award">
-    </div>
-    <div class="col-lg-6">
-      <div class="achievement-description">
-        <h4 class="fw-bold">Jiva Kavach – Patented Innovation for Cattle Safety, Successfully Deployed On-Field</h4>
-        <p>
-          India records over 25,000 incidents annually involving stray cattle on railway tracks, leading to significant loss of livestock, damage to railway infrastructure, and disruption of train services. These accidents not only cause emotional and financial distress to farmers but also result in delays, repairs, and economic losses for Indian Railways.
-          To address this critical issue, we developed Jiva Kavach—a first-of-its-kind preventive safety system for cattle. Successfully deployed in field trials, Jiva Kavach has shown proven effectiveness in deterring livestock from straying onto railway tracks, thereby reducing the risk of accidents. This socially impactful solution has been awarded a patent, recognizing its originality and public value.
-          This achievement stands as a testament to our commitment to rural safety, animal welfare, and infrastructure protection—offering a scalable and sustainable solution to a problem that affects thousands of lives and livelihoods every year.
-          <!-- Watch the Video Button -->
-      <button class="btn btn-primary" onclick="playInlineVideo()">
-        Watch Now!
-      </button>
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- Script: Inline Video Popup -->
-<script>
-  function playInlineVideo() {
-    // Overlay
-    const overlay = document.createElement('div');
-    overlay.style.position = "fixed";
-    overlay.style.top = "0";
-    overlay.style.left = "0";
-    overlay.style.width = "100vw";
-    overlay.style.height = "100vh";
-    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
-    overlay.style.display = "flex";
-    overlay.style.justifyContent = "center";
-    overlay.style.alignItems = "center";
-    overlay.style.zIndex = "9998";
-    overlay.onclick = () => {
-      document.body.removeChild(overlay);
-    };
+    <!-- Custom JavaScript -->
+    <script>
+      // Initialize AOS animations
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+      });
 
-    // Video Container
-    const videoWrapper = document.createElement('div');
-    videoWrapper.style.width = "80%";
-    videoWrapper.style.maxWidth = "800px";
-    videoWrapper.style.aspectRatio = "16/9";
-    videoWrapper.style.background = "#000";
-    videoWrapper.style.position = "relative";
+      // Video modal functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const videoModal = document.getElementById("videoModal");
+        const videoFrame = document.getElementById("videoFrame");
 
-    // Stop click bubbling from closing when inside the video box
-    videoWrapper.onclick = (e) => e.stopPropagation();
+        // Handle all video buttons
+        document.querySelectorAll(".watch-video-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const videoId = this.getAttribute("data-video-id");
+            videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1`;
+            videoModal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+          });
+        });
 
-    // iFrame
-    const iframe = document.createElement('iframe');
-    iframe.src = "https://www.youtube-nocookie.com/embed/AEtrUpSSv14?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1";
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
-    iframe.style.border = "none";
-    iframe.allow = "autoplay; fullscreen";
-    iframe.allowFullscreen = true;
-
-    videoWrapper.appendChild(iframe);
-    overlay.appendChild(videoWrapper);
-    document.body.appendChild(overlay);
-  }
-</script>
-
-  <!-- Achievement 2 -->
-  <div class="row achievement align-items-center flex-lg-row-reverse" data-aos="fade-left">
-    <div class="col-lg-6">
-      <img src="assets/images/award2.jpg" alt="Partnership with Indian Railways">
-    </div>
-    <div class="col-lg-6">
-      <div class="achievement-description">
-        <h4 class="fw-bold">Next-Gen Anti-Counterfeiting for Smarter Returns - Patented</h4>
-        <p>
-         We're excited to introduce a cutting-edge anti-counterfeiting solution that enhances product authenticity, security, and consumer trust. Built to combat return fraud, product swapping, and counterfeiting, it offers a tamper-evident, one-time-use verification system that keeps products traceable and unaltered throughout their lifecycle.
-         This discreet technology detects fraudulent returns—like wardrobing or counterfeit swaps—instantly, helping businesses avoid financial and reputational losses. It integrates seamlessly without affecting product design or sustainability, and it's effective across industries including fashion, retail, logistics, and high-value goods.
-         By making authenticity checks void after use, this innovation provides a reliable safeguard for brands and holds promise for secure applications like packaging. It’s not just fraud protection—it’s a smarter, more secure way forward.
-         <!-- Watch the Video Button -->
-      <button class="btn btn-primary" onclick="playInlineVideo()">
-        Watch Now!
-      </button> 
-        </p>
-      </div>
-    </div>
-  </div>
- <!-- Script: Inline Video Popup -->
-<script>
-  function playInlineVideo() {
-    // Overlay
-    const overlay = document.createElement('div');
-    overlay.style.position = "fixed";
-    overlay.style.top = "0";
-    overlay.style.left = "0";
-    overlay.style.width = "100vw";
-    overlay.style.height = "100vh";
-    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
-    overlay.style.display = "flex";
-    overlay.style.justifyContent = "center";
-    overlay.style.alignItems = "center";
-    overlay.style.zIndex = "9998";
-    overlay.onclick = () => {
-      document.body.removeChild(overlay);
-    };
-
-    // Video Container
-    const videoWrapper = document.createElement('div');
-    videoWrapper.style.width = "80%";
-    videoWrapper.style.maxWidth = "800px";
-    videoWrapper.style.aspectRatio = "16/9";
-    videoWrapper.style.background = "#000";
-    videoWrapper.style.position = "relative";
-
-    // Stop click bubbling from closing when inside the video box
-    videoWrapper.onclick = (e) => e.stopPropagation();
-
-    // iFrame
-    const iframe = document.createElement('iframe');
-    iframe.src = "";
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
-    iframe.style.border = "none";
-    iframe.allow = "autoplay; fullscreen";
-    iframe.allowFullscreen = true;
-
-    videoWrapper.appendChild(iframe);
-    overlay.appendChild(videoWrapper);
-    document.body.appendChild(overlay);
-  }
-</script>
-  <!-- Achievement 3 -->
-  <div class="row achievement align-items-center" data-aos="fade-right">
-    <div class="col-lg-6">
-      <img src="assets/images/ProjectX.jpg" alt="Tech Showcase">
-    </div>
-    <div class="col-lg-6">
-      <div class="achievement-description">
-        <h4 class="fw-bold">Introducing ProjectX</h4>
-        <p>Behind closed doors, something powerful is taking shape. ProjectX isn’t just another innovation—it’s a shift in how we think about security, trust, and technology. While we can't reveal the full scope just yet, what we’re building is designed to disrupt, protect, and redefine standards across multiple industries.
-           At its core, ProjectX addresses a growing problem that affects millions daily. The impact? Think fewer vulnerabilities, stronger safeguards, and smarter systems. The ripple effects will be felt in places you might not expect—from everyday consumer experiences to high-stakes global operations.
-           We’re engineering not just a product, but a force multiplier. One that blends invisibility with influence, and simplicity with strength. The results? They’ll speak for themselves—soon.
-           Stay tuned. The future is about to be redefined.
-        </p>
-      </div>
-    </div>
-  </div>
-
-</section>
-<!-- ====== End Achievements Section ====== -->
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    easing: 'ease-in-out',
-    once: true
-  });
-</script>
-
-</body>
-</html>
-
-<!-- ====== End Achievements Section ====== -->
-
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+        // Close modal when clicking outside video
+        videoModal.addEventListener("click", function (e) {
+          if (e.target === videoModal) {
+            videoFrame.src = "";
+            videoModal.style.display = "none";
+            document.body.style.overflow = "auto"; // Re-enable scrolling
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
