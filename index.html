@@ -121,64 +121,58 @@
     </section>
     <!-- ====== Hero End ====== -->
 	   <!-----------------Chatbot start------------------>
-	  <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
-<script>
-  window.addEventListener("DOMContentLoaded", function() {
-    window.AgentInitializer.init({
-      agentRenderURL: "https://agent.jotform.com/019649da8b327722b832a6b11998b1a07bbe",
-      rootId: "JotformAgent-019649da8b327722b832a6b11998b1a07bbe",
-      formID: "019649da8b327722b832a6b11998b1a07bbe",
-      queryParams: ["skipWelcome=1", "maximizable=1"],
-      domain: "https://www.jotform.com",
-      isDraggable: false,
-      background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
-      buttonBackgroundColor: "#0066C3",
-      buttonIconColor: "#FFFFFF",
-      variant: false,
-      customizations: {
-        "greeting": "Yes",
-        "greetingMessage": "Hi! How can I assist you?",
-        "pulse": "Yes",
-        "position": "right"
-      },
-      isVoice: false,
-    });
-  });
-</script>
- <!-----------------Chatbot end------------------>
-	  
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919494923153" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
-</a>
+	  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website with Chatbot and WhatsApp</title>
+  <style>
+    /* Style for the WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 2.5cm; /* 3cm gap from the chatbot */
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
 
-<style>
-  .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4869ED;
-    border-radius: 50%;
-    text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-  }
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
 
-  .whatsapp-float img {
-    width: 30px;
-    height: 30px;
-  }
+    .whatsapp-float:hover {
+      background-color: #128C7E;
+    }
+  </style>
+</head>
+<body>
+  <!-- Your website content -->
+  
+  <!-- Chatbot Integration -->
+  <script>
+    window.chtlConfig = { chatbotId: "9578536382" }
+  </script>
+  <script async data-id="9578536382" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 
-  .whatsapp-float:hover {
-    background-color: #20b954;
-  }
-</style>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/your-whatsapp-number" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+  
+</body>
+</html>
+<!-----------------------Chat----------->
 
     <!-- ====== About Start ====== -->
     <section id="about" class="ud-about">
