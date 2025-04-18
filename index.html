@@ -120,6 +120,33 @@
       </div>
     </section>
     <!-- ====== Hero End ====== -->
+	   <!-----------------Chatbot start------------------>
+	  <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    window.AgentInitializer.init({
+      agentRenderURL: "https://agent.jotform.com/019649da8b327722b832a6b11998b1a07bbe",
+      rootId: "JotformAgent-019649da8b327722b832a6b11998b1a07bbe",
+      formID: "019649da8b327722b832a6b11998b1a07bbe",
+      queryParams: ["skipWelcome=1", "maximizable=1"],
+      domain: "https://www.jotform.com",
+      isDraggable: false,
+      background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
+      buttonBackgroundColor: "#0066C3",
+      buttonIconColor: "#FFFFFF",
+      variant: false,
+      customizations: {
+        "greeting": "Yes",
+        "greetingMessage": "Hi! How can I assist you?",
+        "pulse": "Yes",
+        "position": "right"
+      },
+      isVoice: false,
+    });
+  });
+</script>
+ <!-----------------Chatbot end------------------>
+	  
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919494923153" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
